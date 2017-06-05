@@ -30,7 +30,7 @@ Additionally, the pipeline performs a conversion to Gray Scale image, in which n
 
 ---
 ### **4. Blur Image Filtering and Canny Edge Operator**
-Before applying Canny Edge Detector a Blur filter should be applied. For this pipeline the kernel size is equal to 15. The reason is because since images may have compression artifacts and also are taken from real situations that means some noise is within each frame.
+Before applying Canny Edge Detector, a Blur filter should be applied. For this pipeline the kernel size is equal to 15. The reason is because since images may have compression artifacts and also are taken from real situations that means some noise is within each frame.
 After applying Blur to the image the pipeline applies the Canny Operator.
 
 ---
@@ -39,7 +39,7 @@ This step in the pipeline is straightforward, using image shape, the program cal
 
 ---
 ### **6. Obtain the Hough Lines of the image and Draw them**
-Using the masked Canny Image as input for this step, the pipeline calculates an draws the Hough Lines in a black image.
+Using the masked Canny Image as input for this step, the pipeline calculates and draws the Hough Lines in a black image.
 To do this first the OpenCV built-in function for Hough Lines is used, this function return a list of lines consisting of start-end points.
 With the use of these points, the program calculates all the b, m and length of each of these lines. These parameters are going to be average using the length as weights (a large line contributes more than a shorter one).
 At the end only two lines (maximum) should be detected and drawn.
